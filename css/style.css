@@ -77,7 +77,8 @@
     background-color: #fff8e9;
     padding: 60px 0;
     display: flex;
-    justify-content: center; /* 中央對齊內部內容 */
+    justify-content: center;
+    /* 中央對齊內部內容 */
 }
 
 .main-visual .inner {
@@ -431,7 +432,8 @@
 }
 
 .floating-request-btn img {
-    width: 60px; /* 根據實際需求調整 */
+    width: 60px;
+    /* 根據實際需求調整 */
     height: auto;
 }
 
@@ -501,7 +503,9 @@
 
 .about__diagram img {
     max-width: 100%;
+    display: block;
     margin: 0 auto 150px;
+    height: auto;
 }
 
 .aboutSub__ttl {
@@ -920,13 +924,13 @@
 }
 
 /* 步驟列表 */
-.step__list {
+.step2__list {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.step {
+.step2 {
     display: flex;
     align-items: flex-start;
     gap: 20px;
@@ -959,14 +963,14 @@
   }
    */
 /* step 右側內容 */
-.step__body {
+.step2__body {
     display: flex;
     flex-direction: column;
     flex: 1;
     max-width: calc(100% - 84px);
 }
 
-.step__body img {
+.step2__body img {
     width: 100%;
     max-width: 270px;
     height: auto;
@@ -974,25 +978,25 @@
     border-radius: 4px;
 }
 
-.step__text h3 {
+.step2__text h3 {
     font-size: 20px;
     color: #1ca388;
     margin-bottom: 10px;
 }
 
-.step__text p {
+.step2__text p {
     font-size: 15px;
     line-height: 1.8;
     margin-bottom: 10px;
     color: #333;
 }
 
-.step__text ul {
+.ste2__text ul {
     padding-left: 1.2em;
     margin-top: 0;
 }
 
-.step__text ul li {
+.step2__text ul li {
     font-size: 14px;
     line-height: 1.7;
     list-style-type: disc;
@@ -1376,4 +1380,116 @@ select {
 .toTop img {
     width: 100%;
     height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .about__diagram img {
+        margin: 0 auto 60px;
+    }
+
+    .aboutLead__list {
+        position: static;
+        transform: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .aboutLead__item {
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .floating-request-btn {
+        right: 0;
+        bottom: 10px;
+        transform: translateX(0%);
+    }
+
+    .problem__content {
+        flex-direction: column;
+        padding-right: 0;
+        gap: 20px;
+      }
+    
+      .problem__list {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+      }
+    
+      .problem__list li {
+        font-size: 15px;
+        line-height: 1.6;
+        padding: 12px 16px;
+      }
+    
+      .problem__image {
+        max-width: 220px;
+        margin: 0 auto;
+      }
+
+      .step-img {
+        position: relative;
+        width: 100%;
+        padding: 0;
+      }
+    
+      .step-img img {
+        width: 100%;
+        height: auto;
+      }
+    
+      .step-caption {
+        position: static; /* 移除絕對定位 */
+        margin-top: 2px;
+        padding: 0px;
+        font-size: 10px;
+        line-height: 1.7;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        border-radius: 6px;
+        text-align: left;
+      }
+      
+      .step-caption {
+        position: absolute;
+        top: 10px;
+        left: 90px;
+        background: rgba(255,255,255,0.8); /* 可選：避免文字撞色 */
+      }
+
+      .reason__list {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+      }
+    
+      .reason__content {
+        max-width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+      }
+    
+      .reason__content p {
+        font-size: 12px;
+        line-height: 1.6;
+        color: #333;
+        word-break: break-word;
+      }
+    
+      .reason__content h3 {
+        font-size: 18px;
+        line-height: 1.4;
+        margin-bottom: 12px;
+        text-align: center;
+      }
+    
+      .reason__item img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto 10px;
+      }
 }
